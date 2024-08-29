@@ -15,13 +15,13 @@ public class Main {
             numbers[i] = Integer.parseInt(strNumbers[i]);
         }
 
-        System.out.print(getLcm(n));
+        System.out.print(getLcm());
     }
 
-    private static int getLcm(int count) {
+    private static int getLcm() {
 
         int lcm = numbers[0];
-        for (int i = 0; i < count - 1; i++) {
+        for (int i = 0; i < numbers.length - 1; i++) {
             lcm = lcm * numbers[i + 1] / getGcd(lcm, numbers[i + 1]);
         }
 
