@@ -10,6 +10,6 @@ public class Main {
         Arrays.sort(chrArr1);
         Arrays.sort(chrArr2);
 
-        System.out.print(Arrays.toString(chrArr1).equals(Arrays.toString(chrArr2)) ? "Yes" : "NO");
+        System.out.print(Arrays.toString(chrArr1).equals(Arrays.toString(chrArr2)) ? "Yes" : "No");
     }
 }
