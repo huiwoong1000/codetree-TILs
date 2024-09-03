@@ -11,7 +11,9 @@ public class Main {
             members[i] = new Member(sc.next(), sc.next(), sc.next());
         }
 
+        Arrays.sort(members);
         Member lastMember = members[n - 1];
+        
         System.out.println("name " + lastMember.getName());
         System.out.println("addr " + lastMember.getZipcode());
         System.out.println("city " + lastMember.getRegion());
