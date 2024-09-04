@@ -48,12 +48,9 @@ class Student implements Comparable<Student> {
     public int compareTo(Student s) {
         if (w.equals(s.getW()) && h.equals(s.getH())) {
             return number.compareTo(s.getNumber());
-            // return s.getNumber().compareTo(number);
         } else if (h.equals(s.getH())) {
-            return w.compareTo(s.getW());
-            // return s.getW().compareTo(w);
+            return s.getW().compareTo(w);
         } else {
-            // return h.compareTo(s.getH());
             return s.getH().compareTo(h);
         }
     }
