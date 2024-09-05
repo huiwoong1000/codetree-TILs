@@ -8,7 +8,8 @@ public class Main {
         int h = sc.nextInt();
         int m = sc.nextInt();
 
-        System.out.println(getMinutes(d, h, m) - getMinutes(11, 11, 11));
+        int result = getMinutes(d, h, m) - getMinutes(11, 11, 11);
+        System.out.println(result < 0 ? -1 : result);
     }
 
     private static int getMinutes(int d, int h, int m) {
