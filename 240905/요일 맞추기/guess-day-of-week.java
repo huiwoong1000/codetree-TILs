@@ -15,11 +15,17 @@ public class Main {
         String result = "Mon";
         switch (diffDays) {
             case 1: result = "Tue";
+            break;
             case 2: result = "Wed";
+            break;
             case 3: result = "Thu";
+            break;
             case 4: result = "Fri";
+            break;
             case 5: result = "Sat";
+            break;
             case 6: result = "Sun";
+            break;
         }
 
         System.out.println(result);
