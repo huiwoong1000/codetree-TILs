@@ -19,6 +19,7 @@ public class Main {
             case "Fri": diffDays += 4; break;
             case "Sat": diffDays += 5; break;
             case "Sun": diffDays += 6; break;
+            case "Mon": diffDays += 7; break;
         }
 
         System.out.println(diffDays / 7);
