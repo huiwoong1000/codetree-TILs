@@ -7,6 +7,10 @@ public class Main {
         int n = sc.nextInt();
         List<Integer> digits = new ArrayList<>();
 
+        if (n == 0) {
+            digits.add(0);
+        }
+
         while (n > 0) {
             digits.add(n % 2);
             n /= 2;
