@@ -10,8 +10,8 @@ public class Main {
         int max = 0;
 
         for (int i = 0; i < k; i++) {
-            int start = sc.nextInt();
-            int end = sc.nextInt();
+            int start = sc.nextInt() - 1;
+            int end = sc.nextInt() - 1;
 
             for (int j = start; j <= end; j++) {
                 if (max < ++result[j]) {
