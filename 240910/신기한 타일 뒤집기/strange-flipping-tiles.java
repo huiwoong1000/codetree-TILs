@@ -5,31 +5,24 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int offset = 100000;
+        int offset = n * 100;
         int[] result = new int[offset * 2 + 1];
         int start = offset;
-        int end = offset;
-        int move = 0;
 
         for (int i = 0; i < n; i++) {
-            move = sc.nextInt();
-            if (sc.next().charAt(0) == 'R') {
-                end += move;
-            } else {
-                end -= move;
-            }
+            int move = sc.nextInt();
 
-            if (start < end) {
-                for (int j = start; j < end; j++) {
+            if (sc.next().charAt(0) == 'R') {
+                for (int j = start; j < start + move; j++) {
                     result[j] = 2;
                 }
+                start += move - 1;  // 마지막으로 칠한 타일 위치 조정
             } else {
-                for (int j = end; j < start; j++) {
+                for (int j = start; j > start - move; j--) {
                     result[j] = 1;
                 }
+                start -= move - 1;
             }
-
-            start = end;
         }
 
         int countW = 0;
