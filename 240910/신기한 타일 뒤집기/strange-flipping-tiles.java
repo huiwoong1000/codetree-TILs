@@ -5,7 +5,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int offset = 100;
+        int offset = 100000;
         int[] result = new int[offset * 2 + 1];
         int start = offset;
         int end = offset;
