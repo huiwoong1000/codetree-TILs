@@ -30,32 +30,51 @@ public class Main {
             }
         }
 
+        int lengthJ = 0;
         int maxJ = 0;
+        int minJ = maxLength;
         for (int i = 0; i < maxLength; i++) {
-            int countJ = 0;
+            boolean flag = false;
             for (int j = 0; j < maxLength; j++) {
                 if (arr[i][j] == 1) {
-                    countJ++;
-                    if (countJ > maxJ) {
-                        maxJ = countJ;
+                    if (j - offset < minJ) {
+                        minJ = j - offset;
+                    } 
+                    
+                    lengthJ = j - offset;
+                    if (lengthJ > maxJ) {
+                        maxJ = lengthJ + 1;
                     }
-                }
+                } 
             }
         }
+        // System.out.println("minJ = " + minJ);
+        // System.out.println("maxJ = " + maxJ);
+        int height = maxJ - minJ;
+        // System.out.println("height = " + height);
 
+        int lengthI = 0;
         int maxI = 0;
-        for (int i = 0; i < maxLength; i++) {
-            int countI = 0;
-            for (int j = 0; j < maxLength; j++) {
-                if (arr[j][i] == 1) {
-                    countI++;
-                    if (countI > maxI) {
-                        maxI = countI;
+        int minI = maxLength;
+        for (int j = 0; j < maxLength; j++) {
+            boolean flag = false;
+            for (int i = 0; i < maxLength; i++) {
+                if (arr[i][j] == 1) {
+                    if (i - offset < minI) {
+                        minI = i - offset;
                     }
+
+                    lengthI = i - offset;
+                    if (lengthI > maxI) {
+                        maxI = lengthI + 1;
+                    }
+                    // System.out.println("lengthI = " + lengthI);
                 }
             }
         }
-        
-        System.out.println(maxI * maxJ);
+        int width = maxI - minI;
+        // System.out.println("width = " + width);
+
+        System.out.println(height * width);
     }
 }
