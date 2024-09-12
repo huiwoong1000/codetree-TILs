@@ -30,49 +30,52 @@ public class Main {
             }
         }
 
-        int lengthJ = 0;
+        int maxValue = 0;
         int maxJ = 0;
+        int minValue = maxLength;
         int minJ = maxLength;
         for (int i = 0; i < maxLength; i++) {
-            boolean flag = false;
             for (int j = 0; j < maxLength; j++) {
                 if (arr[i][j] == 1) {
-                    if (j - offset < minJ) {
-                        minJ = j - offset;
+                    
+                    minValue = j;
+                    if (minValue < minJ) {
+                        minJ = minValue;
                     } 
                     
-                    lengthJ = j - offset;
-                    if (lengthJ > maxJ) {
-                        maxJ = lengthJ + 1;
+                    maxValue = j;
+                    if (maxValue > maxJ) {
+                        maxJ = maxValue;
                     }
                 } 
             }
         }
         // System.out.println("minJ = " + minJ);
         // System.out.println("maxJ = " + maxJ);
-        int height = maxJ - minJ;
+        int height = maxJ - minJ + 1;
         // System.out.println("height = " + height);
 
         int lengthI = 0;
         int maxI = 0;
         int minI = maxLength;
         for (int j = 0; j < maxLength; j++) {
-            boolean flag = false;
             for (int i = 0; i < maxLength; i++) {
                 if (arr[i][j] == 1) {
-                    if (i - offset < minI) {
-                        minI = i - offset;
+                    
+                    if (i < minI) {
+                        minI = i;
                     }
 
-                    lengthI = i - offset;
+                    lengthI = i;
                     if (lengthI > maxI) {
-                        maxI = lengthI + 1;
+                        maxI = lengthI;
                     }
-                    // System.out.println("lengthI = " + lengthI);
                 }
             }
         }
-        int width = maxI - minI;
+        // System.out.println("minI = " + minI);
+        // System.out.println("maxI = " + maxI);
+        int width = maxI - minI + 1;
         // System.out.println("width = " + width);
 
         System.out.println(height * width);
