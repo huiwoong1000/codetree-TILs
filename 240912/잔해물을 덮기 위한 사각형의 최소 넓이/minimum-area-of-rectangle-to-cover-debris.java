@@ -78,6 +78,7 @@ public class Main {
         int width = maxI - minI + 1;
         // System.out.println("width = " + width);
 
-        System.out.println(height * width);
+        int result = height * width;
+        System.out.println(result >= 4000000 ? 0 : result);
     }
 }
