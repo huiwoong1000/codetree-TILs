@@ -18,9 +18,9 @@ public class Main {
 
             for (int j = 0; j < t; j++) {
                 if (d == 'R') {
-                    NList.add(position++);
+                    NList.add(++position);
                 } else {
-                    NList.add(position--);
+                    NList.add(--position);
                 }
             }
         }
@@ -34,19 +34,18 @@ public class Main {
 
             for (int j = 0; j < t; j++) {
                 if (d == 'R') {
-                    MList.add(position++);
+                    MList.add(++position);
                 } else {
-                    MList.add(position--);
+                    MList.add(--position);
                 }
             }
         }
 
         int result = -1;
-        int length = (NList.size() > MList.size() ? NList.size() : MList.size());
-        for (int i = 2; i < length; i++) {
+        for (int i = 1; i < NList.size(); i++) {
             
-            if (NList.get(i) == MList.get(i)) {
-                result = i;
+            if (NList.get(i).equals(MList.get(i))) {
+                result = i + 1;
                 break;
             }
         }
