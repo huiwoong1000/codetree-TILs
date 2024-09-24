@@ -34,11 +34,23 @@ public class Main {
         }
 
         int count = 0;
-        for (int i = 1; i < listA.size(); i++) {
-            if (listA.get(i).equals(listB.get(i))) {
-                if (!listA.get(i - 1).equals(listB.get(i - 1))) {
+        int curr = 0;
+        List<Integer> diff = new ArrayList<>();
+        for (int i = 0; i < listA.size(); i++) {
+            diff.add(listA.get(i) - listB.get(i));
+
+            if (diff.get(i) < 0) {
+                if (curr > 0) {
                     count++;
                 }
+            } else if (diff.get(i) > 0) {
+                if (curr < 0) {
+                    count++;
+                }
+            }
+
+            if (diff.get(i) != 0) {
+                curr = diff.get(i);
             }
         }
 
