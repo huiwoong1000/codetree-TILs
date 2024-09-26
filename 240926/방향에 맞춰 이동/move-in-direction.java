@@ -20,7 +20,7 @@ public class Main {
                 case 'N':
                     y += dy[1] * sc.nextInt();
                     break;
-                case 'w':
+                case 'W':
                     x += dx[2] * sc.nextInt();
                     break;
                 case 'S':
