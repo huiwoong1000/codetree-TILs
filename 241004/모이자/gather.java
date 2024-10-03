@@ -15,8 +15,8 @@ public class Main {
         int sumMove = 0;
         int minSumMove = Integer.MAX_VALUE;
 
-        for (int position = 0; position < 5; position++) {
-            for (int i = 0; i < 5; i++) {
+        for (int position = 0; position < n; position++) {
+            for (int i = 0; i < n; i++) {
                 sumMove += numbers[i] * Math.abs(i - position);
             }
 
