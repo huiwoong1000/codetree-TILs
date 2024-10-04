@@ -14,7 +14,7 @@ public class Main {
         int sumMove = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                sumMove += manNumbers[j] * ((j + n - i) % 5);
+                sumMove += manNumbers[j] * ((j + n - i) % n);
             }
             minMove = Math.min(sumMove, minMove);
             sumMove = 0;
