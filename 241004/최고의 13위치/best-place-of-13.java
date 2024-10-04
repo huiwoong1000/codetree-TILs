@@ -16,7 +16,7 @@ public class Main {
         int maxCoinCount = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n - 2; j++) {
-                maxCoinCount = Math.max(maxCoinCount, coins[i][j] + coins[i][j + 1] + coins[i][j + 1]);
+                maxCoinCount = Math.max(maxCoinCount, coins[i][j] + coins[i][j + 1] + coins[i][j + 2]);
             }
         }
 
