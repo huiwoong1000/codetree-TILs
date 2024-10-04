@@ -12,7 +12,7 @@ public class Main {
         }
 
         int maxValue = Integer.MIN_VALUE;
-        for (int i = 0; i < n - 3; i++) {
+        for (int i = 0; i < n - 2; i++) {
             for (int j = i + 2; j < n; j++) {
                 maxValue = Math.max(maxValue, numbers[i] + numbers[j]);
             }
