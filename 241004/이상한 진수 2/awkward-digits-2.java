@@ -5,6 +5,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         char[] charDigits = sc.next().toCharArray();
+        if (charDigits.length == 1) {
+            System.out.print(0);
+            return;
+        }
+        
         List<Integer> digits = new ArrayList<>();
 
         for (int i = 0; i < charDigits.length; i++) {
