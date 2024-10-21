@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        int[] numbers = new int[10000];
+        int[] numbers = new int[10001];
         int maxPosition = 0;
 
         for (int i = 0; i < n; i++) {
@@ -24,7 +24,7 @@ public class Main {
         }
 
         int maxScore = 0;
-        for (int i = 0; i <= maxPosition - k; i++) {
+        for (int i = 0; i <= 10000 - k; i++) {
             int sumScore = 0;
             for (int j = i; j <= i + k; j++) {
                 sumScore += numbers[j];
