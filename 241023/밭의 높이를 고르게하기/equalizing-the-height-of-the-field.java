@@ -14,9 +14,9 @@ public class Main {
         }
 
         int minCost = Integer.MAX_VALUE;
-        for (int i = 0; i < n - 3; i++) {
+        for (int i = 0; i <= n - t; i++) {
             int cost = 0;
-            for (int j = i; j < i + 3; j++) {
+            for (int j = i; j < i + t; j++) {
                 cost += Math.abs(heights[j] - h);
             }
 
