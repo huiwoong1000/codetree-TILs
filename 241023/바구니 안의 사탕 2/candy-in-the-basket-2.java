@@ -9,23 +9,21 @@ public class Main {
         int[] numbers = new int[101];
 
         for (int i = 0; i < n; i++) {
-            numbers[sc.nextInt()] = sc.nextInt();
+            int candy = sc.nextInt();
+            int index = sc.nextInt();
+            numbers[index] += candy;
         }
 
-        int c = 0;
         int maxCount = 0;
         for (int i = k; i < numbers.length - k; i++) {
             int count = 0;
-            for (int j = i - k; j < i + k; j++) {
+            for (int j = i - k; j <= i + k; j++) {
                 count += numbers[j];
             }
 
-            if (maxCount < count) {
-                maxCount = count;
-                c = i + k;
-            }
+            maxCount = Math.max(maxCount, count);
         }
 
-        System.out.print(c);
+        System.out.print(maxCount);
     }
 }
