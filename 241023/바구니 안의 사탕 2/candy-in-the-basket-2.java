@@ -15,12 +15,15 @@ public class Main {
         }
 
         int maxCount = 0;
-        for (int i = k; i < numbers.length - k; i++) {
+        for (int i = k; i < numbers.length; i++) {
             int count = 0;
             for (int j = i - k; j <= i + k; j++) {
+                if (j >= numbers.length) {
+                    break;
+                }
                 count += numbers[j];
             }
-
+            
             maxCount = Math.max(maxCount, count);
         }
 
