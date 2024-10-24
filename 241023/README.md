@@ -4,18 +4,18 @@
 24년 10월 23일 목표(90px)를 달성했어요🥳.
 
 ![90xp](https://img.shields.io/badge/EXP-90xp-%235cb85c.svg?for-the-badge)
-![1일째](https://img.shields.io/badge/연속학습-1일째-%23E34F26.svg?for-the-badge)
+![0일째](https://img.shields.io/badge/연속학습-0일째-%23E34F26.svg?for-the-badge)
 
 |총 문제수|획득 경험치|연속 학습|
 |---:|---:|---|
-4|90xp|1일째🔥|
+4|90xp|0일째❄️|
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
 |[Novice Mid / 완전탐색 I / 구간 단위로 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[연습]바구니 안의 사탕 2](https://www.codetree.ai/missions/5/problems/candy-in-the-basket-2)|![보통][medium]|![Passed][passed]|[링크](https://github.com/huiwoong1000/codetree-TILs/blob/main/241023/%EB%B0%94%EA%B5%AC%EB%8B%88%20%EC%95%88%EC%9D%98%20%EC%82%AC%ED%83%95%202/candy-in-the-basket-2.java)|
 |[Novice Mid / 완전탐색 I / 구간 단위로 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[테스트]밭의 높이를 고르게하기](https://www.codetree.ai/missions/5/problems/equalizing-the-height-of-the-field)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/huiwoong1000/codetree-TILs/blob/main/241023/%EB%B0%AD%EC%9D%98%20%EB%86%92%EC%9D%B4%EB%A5%BC%20%EA%B3%A0%EB%A5%B4%EA%B2%8C%ED%95%98%EA%B8%B0/equalizing-the-height-of-the-field.java)|
 |[Novice Mid / 완전탐색 I / 자리 마다 숫자를 정하는 완전탐색](https://www.codetree.ai/missions?missionId=5)|[[개념]한 가지로 열리는 자물쇠](https://www.codetree.ai/missions/5/problems/one-way-lock)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/huiwoong1000/codetree-TILs/blob/main/241023/%ED%95%9C%20%EA%B0%80%EC%A7%80%EB%A1%9C%20%EC%97%B4%EB%A6%AC%EB%8A%94%20%EC%9E%90%EB%AC%BC%EC%87%A0/one-way-lock.java)|
-|[Novice Mid / Ad-Hoc / 고려해야 할 대상이 뚜렷이 정해지는 경우](https://www.codetree.ai/missions?missionId=5)|[[개념]A, B, C 찾기](https://www.codetree.ai/missions/5/problems/finding-a-b-c)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/huiwoong1000/codetree-TILs/blob/main/241023/A%2C%20B%2C%20C%20%EC%B0%BE%EA%B8%B0/finding-a-b-c.java)|
+|[Novice Mid / Ad-Hoc / 고려해야 할 대상이 뚜렷이 정해지는 경우](https://www.codetree.ai/missions?missionId=5)|[A, B, C 찾기](https://www.codetree.ai/missions/5/problems/finding-a-b-c)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/huiwoong1000/codetree-TILs/blob/main/241023/A%2C%20B%2C%20C%20%EC%B0%BE%EA%B8%B0/finding-a-b-c.java)|
 
 
 * 획득 경험치: 해설을 보지 않고 푼 문제에 한해 최초 1회 경험치를 획득하실 수 있습니다.
