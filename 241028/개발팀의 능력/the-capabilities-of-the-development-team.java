@@ -20,9 +20,8 @@ public class Main {
                     if (i == j || i == k || j == k) {
                         continue;
                     }
-                    if (isDiff(i, j, k)) {
-                        minResult = Math.min(minResult, getDiff(i, j, k));
-                    }
+
+                    minResult = Math.min(minResult, getDiff(i, j, k));
                 }
             }
         }
@@ -37,14 +36,10 @@ public class Main {
         int[] sums = {sum1, sum2, sum3};
         Arrays.sort(sums);
 
+        if (sum1 == sum2 || sum2 == sum3 || sum3 == sum1) {
+            return Integer.MAX_VALUE;
+        }
+
         return sums[2] - sums[0];
-    }
-
-    private static boolean isDiff(int i, int j, int k) {
-        int sum1 = numbers[i];
-        int sum2 = numbers[j] + numbers[k];
-        int sum3 = sumAll - sum1 - sum2;
-
-        return sum1 != sum2 && sum1 != sum3 && sum2 != sum3;
     }
 }
