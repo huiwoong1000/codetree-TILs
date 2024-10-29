@@ -17,13 +17,9 @@ public class Main {
             int[] newPriceArr = new int[n];
             System.arraycopy(priceArr, 0, newPriceArr, 0, priceArr.length);
 
-            for (int j = 0; j < n; j++) {
-                if (i == j) {
-                    newPriceArr[j] /= 2;
-                }
-            }
-
+            newPriceArr[i] /= 2;
             Arrays.sort(newPriceArr);
+            
             int money = b;
             int candidate = 0;
             for (int j = 0; j < newPriceArr.length; j++) {
