@@ -8,24 +8,20 @@ public class Main {
         int y = sc.nextInt();
         List<Integer> sumList = new ArrayList<>();
 
+        int maxSum = 0;
         for (int i = x; i <= y; i++) {
-            List<Integer> numbers = new ArrayList<>();
-            int number = i;
-            while (number > 0) {
-                numbers.add(number % 10);
-                number /= 10;
-            }
-
-            int sum = 0;
-            for (Integer n : numbers) {
-                sum += n;
-            }
-
-            sumList.add(sum);
+            maxSum = Math.max(maxSum, getDigitSum(i));
         }
 
-        sumList.sort(null);
+        System.out.print(maxSum);
+    }
 
-        System.out.print(sumList.get(sumList.size() - 1));
+    private static int getDigitSum(int n) {
+
+        if (n < 10) {
+            return n;
+        }
+
+        return getDigitSum(n / 10) + (n % 10);
     }
 }
