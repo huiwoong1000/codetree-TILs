@@ -28,12 +28,10 @@ public class Main {
             int candidate = 0;
             for (int j = 0; j < newPriceArr.length; j++) {
 
-                if (money >= 0) {
+                if (money - newPriceArr[j] >= 0) {
                     money -= newPriceArr[j];
-                } else {
-                    candidate = j;
-                    break;
-                }
+                    candidate = j + 1;
+                } 
             }
 
             maxStudentNumber = Math.max(maxStudentNumber, candidate);
