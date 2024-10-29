@@ -45,7 +45,6 @@ public class Main {
                         }
 
                         if (passed) {
-                            System.out.println("passed, i=" + i + ", j=" + j + ", k=" + k);
                             count++;
                         }
                     }
