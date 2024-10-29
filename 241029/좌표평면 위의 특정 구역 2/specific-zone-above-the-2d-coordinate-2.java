@@ -31,7 +31,7 @@ public class Main {
             }
             Arrays.sort(xs);
             Arrays.sort(ys);
-            minArea = Math.min(minArea, (xs[2] - xs[0]) * (ys[2] - ys[0]));
+            minArea = Math.min(minArea, (xs[xs.length - 1] - xs[0]) * (ys[ys.length - 1] - ys[0]));
         }
 
         System.out.print(minArea);
