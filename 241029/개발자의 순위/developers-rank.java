@@ -13,30 +13,22 @@ public class Main {
             }
         }
 
-        List<Integer> scoreList = new ArrayList<>();
+        int[] winners = new int[2021];
         for (int i = 0; i < k; i++) {
             for (int j = 0; j < n - 1; j++) {
                 for (int l = j + 1; l < n; l++) {
-                    scoreList.add(scoreBoard[i][j] * 10 + scoreBoard[i][l]);
+                    winners[scoreBoard[i][j] * 100 + scoreBoard[i][l]]++;
                 }
             }
         }
 
-        scoreList.sort(null);
-        int totalCount = 0;
-        int count = 1;
-        for (int i = 0; i < scoreList.size() - 1; i++) {
-            if (scoreList.get(i) == scoreList.get(i + 1)) {
+        int count = 0;
+        for (int i = 0; i < winners.length; i++) {
+            if (winners[i] == k) {
                 count++;
-            } else {
-                count = 1;
-            }
-            
-            if (count == k) {
-                totalCount++;
             }
         }
 
-        System.out.print(totalCount);
+        System.out.print(count);
     }
 }
