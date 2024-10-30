@@ -16,22 +16,25 @@ public class Main {
 
         for (int x = 0; x < n; x++) {
             List<Integer> elements = new ArrayList<>();
+            boolean isBreaked = false;
             for (int i = x; i < n; i++) {
                 elements.add(numbers[i]);
 
                 if (!(elements.get(elements.size() - 1) - elements.get(0) <= k)) {
+                    isBreaked = true;
                     break;
                 }
-
             }
-            if (elements.size() == n) {
-                elements.add(0);
+
+            int count = 0;
+            if (!isBreaked) {
+                count = elements.size();
+            } else {
+                count = elements.size() - 1;
             }
             
-            int count = elements.size() - 1;
             maxCount = Math.max(maxCount, count);
         }
-
 
         System.out.print(maxCount);
     }
