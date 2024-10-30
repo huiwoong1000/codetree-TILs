@@ -12,15 +12,23 @@ public class Main {
         }
 
         Arrays.sort(numbers);
-        List<Integer> elements = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            elements.add(numbers[i]);
+        int maxCount = 0;
 
-            if (!(elements.get(elements.size() - 1) - elements.get(0) <= k)) {
-                break;
+        for (int x = 0; x < n; x++) {
+            List<Integer> elements = new ArrayList<>();
+            for (int i = x; i < n; i++) {
+                elements.add(numbers[i]);
+
+                if (!(elements.get(elements.size() - 1) - elements.get(0) <= k)) {
+                    break;
+                }
             }
+
+            int count = elements.size() - 1;
+            maxCount = Math.max(maxCount, count);
         }
 
-        System.out.print(elements.size() - 1);
+
+        System.out.print(maxCount);
     }
 }
