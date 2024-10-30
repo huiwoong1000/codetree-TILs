@@ -8,7 +8,7 @@ public class Main {
         char[] seats = sc.next().toCharArray();
 
         int maxMinDist = 0;
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             if (seats[i] == '1') {
                 continue;
             }
