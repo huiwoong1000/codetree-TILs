@@ -13,9 +13,9 @@ public class Main {
         int minSum = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) { //하나를 선택해 2배
             numbers[i] *= 2;
-
-            List<Integer> numberList = new ArrayList<>();
+            
             for (int j = 0; j < n; j++) { //하나를 제거
+                List<Integer> numberList = new ArrayList<>(); //!!!여기서 초기화
                 for (int k = 0; k < n; k++) {
                     if (j == k) {
                         continue;
