@@ -22,8 +22,12 @@ public class Main {
                 if (!(elements.get(elements.size() - 1) - elements.get(0) <= k)) {
                     break;
                 }
-            }
 
+            }
+            if (elements.size() == n) {
+                elements.add(0);
+            }
+            
             int count = elements.size() - 1;
             maxCount = Math.max(maxCount, count);
         }
