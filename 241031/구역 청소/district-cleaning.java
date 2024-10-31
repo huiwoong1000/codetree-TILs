@@ -9,15 +9,21 @@ public class Main {
         int c = sc.nextInt();
         int d = sc.nextInt();
 
-        int result = 0;
-        if (b < c || d < a) {
-            result = b - a + d - c;
-        } else if (a < c) {
-            result = d - a;
-        } else {
-            result = b - c;
+        int[] area = new int[101];
+        for (int i = a; i < b; i++) {
+            area[i] = 1;
+        }
+        for (int j = c; j < d; j++) {
+            area[j] = 1;
         }
 
-        System.out.print(result);
+        int sum = 0;
+        for (int i = 0; i < 101; i++) {
+            if (area[i] == 1) {
+                sum++;
+            }
+        }
+
+        System.out.print(sum);
     }
 }
