@@ -5,24 +5,16 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] area = new int[101];
-        
-        boolean isIntersecting = false;
+        int minX2 = Integer.MAX_VALUE;
+        int maxX1 = 0;
+
         for (int i = 0; i < n; i++) {
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
-
-            for (int j = x1; j <= x2; j++) {
-                area[j]++;
-            }
+            maxX1 = Math.max(maxX1, x1);
+            minX2 = Math.min(minX2, x2);
         }
 
-        for (int i = 0; i < 101; i++) {
-            if (area[i] == n) {
-                isIntersecting = true;
-            }
-        }
-
-        System.out.print(isIntersecting ? "Yes" : "No");
+        System.out.print(maxX1 <= minX2 ? "Yes" : "No");
     }
 }
