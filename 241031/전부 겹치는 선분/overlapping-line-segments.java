@@ -5,15 +5,21 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int x1 = sc.nextInt();
-        int x2 = sc.nextInt();
+        int[] area = new int[101];
         
-        boolean isIntersecting = true;
-        for (int i = 0; i < n - 1; i++) {
-            int a1 = sc.nextInt();
-            int a2 = sc.nextInt();
-            if (x2 < a1 || a2 < x1) {
-                isIntersecting = false;
+        boolean isIntersecting = false;
+        for (int i = 0; i < n; i++) {
+            int x1 = sc.nextInt();
+            int x2 = sc.nextInt();
+
+            for (int j = x1; j <= x2; j++) {
+                area[j]++;
+            }
+        }
+
+        for (int i = 0; i < 101; i++) {
+            if (area[i] == n) {
+                isIntersecting = true;
             }
         }
 
