@@ -4,14 +4,20 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int n = 4;
-        int[] numbers = new int[n];
-        for (int i = 0; i < n; i++) {
-            numbers[i] = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+
+        int result = 0;
+        if (b < c || d < a) {
+            result = b - a + d - c;
+        } else if (a < c) {
+            result = d - a;
+        } else {
+            result = b - c;
         }
 
-        Arrays.sort(numbers);
-
-        System.out.print(numbers[n - 1] - numbers[0]);
+        System.out.print(result);
     }
 }
