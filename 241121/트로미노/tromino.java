@@ -29,6 +29,7 @@ public class Main {
                 int[] candidates = {board[i][j], board[i][j + 1], board[i + 1][j], board[i + 1][j + 1]};
                 Arrays.sort(candidates);
                 maxCount = Math.max(maxCount, candidates[1] + candidates[2] + candidates[3]);
+                
             }
         }
 
@@ -39,13 +40,13 @@ public class Main {
 
         int maxCount = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - 2; j++) {
+            for (int j = 0; j < m - 2; j++) {
                 maxCount = Math.max(maxCount, board[i][j] + board[i][j + 1] + board[i][j + 2]);
             }
         }
 
         for (int i = 0; i < n - 2; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 maxCount = Math.max(maxCount, board[i][j] + board[i + 1][j] + board[i + 2][j]);
             }
         }
