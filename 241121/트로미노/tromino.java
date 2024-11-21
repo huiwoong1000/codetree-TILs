@@ -26,7 +26,7 @@ public class Main {
         int maxCount = 0;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < m - 1; j++) {
-                int[] candidates = {board[i][j], board[i][j + 1], board[i + 1][j], board[i][j + 1]};
+                int[] candidates = {board[i][j], board[i][j + 1], board[i + 1][j], board[i + 1][j + 1]};
                 Arrays.sort(candidates);
                 maxCount = Math.max(maxCount, candidates[1] + candidates[2] + candidates[3]);
             }
