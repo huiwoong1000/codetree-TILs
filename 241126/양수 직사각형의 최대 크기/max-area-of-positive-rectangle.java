@@ -39,7 +39,7 @@ public class Main {
                 boolean isRectangle = true;
                 for (int x = i; x <= dx; x++) {
                     for (int y = j; y <= dy; y++) {
-                        if (board[x][y] < 0) {
+                        if (board[x][y] <= 0) {
                             isRectangle = false;
                         }
                     }
