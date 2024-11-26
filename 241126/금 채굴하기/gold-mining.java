@@ -22,7 +22,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                for (int k = 0; k < n - 1; k++) {
+                for (int k = 0; k < n; k++) {
                     int goldCount = getGoldCount(i, j, k);
                     if ((goldCount * m) - (k * k + (k + 1)*(k + 1)) >= 0) {
                         maxGoldCount = Math.max(maxGoldCount, goldCount);
