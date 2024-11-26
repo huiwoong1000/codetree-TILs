@@ -32,34 +32,25 @@ public class Main {
 
         int width = 0;
         int height = 0;
+        int maxSize = 0;
 
-        for (int y = j; y < m; y++) {
-            if (board[i][y] < 0) {
-                width = y - j;
-                break;
-            }
+        for (int dx = i; dx < n; dx++) {
+            for (int dy = j; dy < m; dy++) {
+                boolean isRectangle = true;
+                for (int x = i; x <= dx; x++) {
+                    for (int y = j; y <= dy; y++) {
+                        if (board[x][y] < 0) {
+                            isRectangle = false;
+                        }
+                    }
+                }
 
-            width = m - j;
-        }
-
-        for (int x = i; x < n; x++) {
-            boolean isRectangle = true;
-
-            for (int y = j; y < width; y++) {
-                if (board[x][y] < 0) {
-                    height = x - i;
-                    isRectangle = false;
-                    break;
+                if (isRectangle) {
+                    maxSize = Math.max(maxSize, (dx - i + 1) * (dy - j + 1));
                 }
             }
-
-            if (!isRectangle) {
-                break;
-            } else {
-                height = n - i;
-            }
         }
 
-        return width * height;
+        return maxSize;
     }
 }
