@@ -25,7 +25,7 @@ public class Main {
             }
         }
 
-        System.out.print(maxSize);
+        System.out.print(maxSize == 0 ? -1 : maxSize);
     }
 
     private static int getMaxPositiveRectangleSize(int i, int j) {
